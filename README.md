@@ -2,6 +2,8 @@
 
 - This project is based on an existing one ---> https://github.com/petr166/mean-chat-app
 
+- It provides public chatting room and private chat rooms 
+
 - The technologies used : Angular 7 - MongoDB - EXPRESS - NODE JS
 
 - Make the application ready to be started :
