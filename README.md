@@ -8,7 +8,7 @@
 
 - Make the application ready to be started :
  
-	1- clone the repo --> git clone https://github.com/petr166/mean-chat-app.git
+	1- clone the repo --> git clone https://github.com/mmoataz3011/Chatting-MEAN
 	
 	2- Go to backend folder 
 	
