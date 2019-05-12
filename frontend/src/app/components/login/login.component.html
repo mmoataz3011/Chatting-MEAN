@@ -1,0 +1,67 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<div class="container">
+<div class="card bg-light">
+<article class="card-body mx-auto" style="max-width: 400px;">
+	<h4 class="card-title mt-3 text-center">Login to Profile</h4>
+		<form #login ="ngForm" (ngSubmit)="onSubmit(login,valid)">
+
+
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+         </div>
+            <input id="email" name="email" class="form-control" placeholder="Email address" type="email"
+            required
+            pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+            [(ngModel)]="newUser.email"
+            #email="ngModel"
+            >
+
+            <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="alert alert-danger">
+
+              <div *ngIf="email.errors?.required">
+               Email is required.
+              </div>
+              <div *ngIf="email.errors?.pattern">
+              Enter a valid Email
+             </div>
+
+
+
+            </div>
+
+        </div> <!-- form-group// -->
+
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+        </div>
+            <input id="password" name="password" class="form-control" placeholder="Create password" type="password"
+            required minlength="6"
+            [(ngModel)]="newUser.password"
+            #password="ngModel"
+            >
+            <div *ngIf="password?.invalid && (password?.dirty || password?.touched)" class="alert alert-danger">
+
+              <div *ngIf="password.errors?.required">
+               Password is required.
+              </div>
+              <div *ngIf="password.errors?.minlength">
+              Min length should be 6
+             </div>
+             </div>
+
+        </div> <!-- form-group// -->
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block"> Login </button>
+        </div> <!-- form-group// -->
+
+    </form>
+</article>
+</div> <!-- card.// -->
+
+</div>
+<!--container end.//-->

@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    </ul>
+    <button class="btn btn-outline-danger my-2 my-sm-0" style="margin-right: 25%" (click)="this.router.navigate(['chat']);" >CHAT</button>
+    
+    <form class="form-inline my-2 my-lg-0">
+     <h3 class="mr-sm-2" >Welcome {{this.User.username}}</h3>
+      <button class="btn btn-outline-success my-2 my-sm-0" (click)="logout()"  type="button">Logout</button>
+    </form>
+  </div>
+</nav>
+
+<h3>Details</h3>
+
+<div>
+<label>username: {{this.User.username}}</label>
+<br>
+<label>email: {{this.User.email}}</label>
+<br>
+<label>password: {{this.User.password}}</label>
+<br>
+</div>
+
+
