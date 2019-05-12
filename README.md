@@ -4,6 +4,8 @@
 
 - It provides public chatting room and private chat rooms 
 
+- It consists of signup page , login page , dashboard and Chat room
+
 - The technologies used : Angular 7 - MongoDB - EXPRESS - NODE JS
 
 - Make the application ready to be started :
